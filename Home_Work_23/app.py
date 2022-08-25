@@ -8,7 +8,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 
 app = Flask(__name__)
 
-def construct_query(data: list[str], cmd: str, value: str) -> list:
+def construct_query(cmd: str, value: str, data: list[str]) -> list:
 	if cmd == "filter":
 		result = list(filter(lambda x: value in x, data))
 	if cmd == "map":
